@@ -4,6 +4,7 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class momo implements InitializingBean,DisposableBean {
+	
 	private double price;
 	private String name;
 	
@@ -21,7 +22,7 @@ public class momo implements InitializingBean,DisposableBean {
 	}
 	public momo() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	@Override
 	public String toString() {
@@ -36,7 +37,6 @@ public class momo implements InitializingBean,DisposableBean {
 	}
 	@Override
 	public void destroy() throws Exception {
-		// TODO Auto-generated method stub
 		System.out.println("Going to throw momo plate");
 		
 	}
