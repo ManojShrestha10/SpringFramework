@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.springcore.collection.Certificate" name="certificate"
+c:name="php programming language"/>
+<bean class="com.springcore.constructor.Person" name="person">
+<constructor-arg value="Manoj" />
+<constructor-arg value="12"/>
+<constructor-arg ref="certificate"/> 
+<constructor-arg type="List">
+<list>
+<value>manoj</value>
+<value>shrestha</value>
+<value>manoj shrestha</value>
+</list>
+</constructor-arg>
+</bean>
+
+<bean class="com.springcore.constructor.addition" name="addition">
+<constructor-arg value="4" type="double" index="1"/>
+<constructor-arg value="3"  type="double" index="0"/>
+</bean>
+</beans>

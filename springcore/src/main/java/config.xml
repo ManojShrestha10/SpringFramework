@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- DI using setter Method-->
+<!-- DI using p schema-->
+<bean class="com.springcore.Student" name="student"
+ p:studentId="123"
+ p:studentName="Manoj Shrestha"
+ p:studentAddress="Ramechhap" />
+ 
+ <!-- DI using setter method with java.util.properties -->
+ <bean class="com.springcore.Student" name="student1">
+ <property name="studentId">
+ <value>100</value>
+ </property>
+ <property name="studentName">
+ <value>Gopal</value>
+ </property>
+ <property name="studentAddress">
+ <value>Nepal</value>
+ </property>
+ </bean>
+ 
+<!-- DI using Constructor Method-->
+<bean class="com.springcore.Teacher" name="teacher">
+<!--Constructor argument type matching-->
+<constructor-arg type="int" value="10000"></constructor-arg>
+<constructor-arg type="String" value="Manoj Sir"></constructor-arg>
+<constructor-arg type="String" value="Japan"></constructor-arg>
+</bean>
+
+<!-- Contructor argument using index attribute-->
+<bean class="com.springcore.Teacher" name="teacher1">
+<constructor-arg index="0" value="200"></constructor-arg>
+<constructor-arg index="1" value="Manoj Shrestha"></constructor-arg>
+<constructor-arg index="2" value="Nepal"></constructor-arg>
+</bean>
+
+<!-- Collection mergint -->
+<bean id="something" class="com.springcore.SomeClass" name="email">
+	<property name="accounts">
+		<map>
+		<entry key="one" value="1"/>
+		<entry key="two" value="2"/>
+		<entry key="three" value="3"/>
+		</map>
+	</property>
+</bean>
+<bean class="com.springcore.list" name="listed">
+<property name="nameList">
+<list>
+<value>something@gmail.com</value>
+<value>shresthamanoj@gmail.com</value>
+</list>
+</property>
+</bean>
+</beans>

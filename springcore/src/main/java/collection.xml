@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.springcore.collection.collection" name="collection">
+<property name="name">
+<value>Manoj Shrestha</value>
+</property>
+<property name="phones">
+<!--Using list collection-->
+<list>
+<value>Iphone 16 pro max</value>
+<value>Iphone 18 pro max</value>
+<value>Iphone 19 pro max</value>
+<value>Iphone 13 pro max</value>
+<value>Iphone 14 pro max</value>
+</list>
+</property>
+<!--Using set collection-->
+<property name="address">
+<set>
+<value>Tokyo</value>
+<value>Saitama</value>
+<value>Ramechhap</value>
+</set>
+</property>
+<!--Using map collection-->
+<property name="courses">
+<map>
+<entry key="Java" value="6months" />
+<entry key="Html" value="5months"/>
+<entry key="Css" value="1year"/>
+<entry key="Php" value="2year"/>
+</map>
+</property>
+<property name="props">
+<props>
+<prop key="name">sales@administrator.com</prop>
+<prop key="family">sales-sales@example.com</prop>
+</props>
+</property>
+</bean>
+</beans>

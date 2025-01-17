@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--Define bean-->
+<bean class="com.contructor.c.namespace.z" name="z" >
+<constructor-arg name="name" value="manoj"></constructor-arg>
+</bean>
+
+<!--Define bean "simple" with dependency on z-->
+<!--simple bean is triggered only after bean z because it depends on z beanß-->
+<bean class="com.contructor.c.namespace.cExample" name="simple" depends-on="z"
+c:email="shrestha544@gmail.com"
+c:ab-ref="z"/>
+
+
+
+</beans>
