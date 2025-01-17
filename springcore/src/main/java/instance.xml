@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.springcore.lifecycle.springInterface.momo" name="momo">
+<property name="price" value="100"/>
+<property name="name" value="Manoj"/>
+</bean>
+
+</beans>
