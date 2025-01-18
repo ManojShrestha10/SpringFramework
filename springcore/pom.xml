@@ -33,6 +33,12 @@
     	<artifactId>spring-core</artifactId>
     	<version>5.0.2.RELEASE</version>
 	</dependency>
+	<!-- dependency to use the annotation life cycle-->
+	<dependency>
+    <groupId>javax.annotation</groupId>
+    <artifactId>javax.annotation-api</artifactId>
+    <version>1.3.2</version>
+</dependency>
 
   </dependencies>
 </project>

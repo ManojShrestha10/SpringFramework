@@ -1,12 +1,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns:c="http://www.springframework.org/schema/c"
-xsi:schemaLocation="http://www.springframework.org/schema/beans
-https://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean class="com.springcore.lifecycle.springInterface.momo" name="momo">
-<property name="price" value="100"/>
-<property name="name" value="Manoj"/>
-</bean>
+    <!-- Enable annotation-driven configuration -->
+    <context:annotation-config />
+
+    <!-- Bean definitions -->
+    <bean id="momo" class="com.springcore.lifecycle.springInterface.momo">
+        <property name="price" value="100"/>
+        <property name="name" value="Manoj"/>
+    </bean>
+
+    <bean id="a1" class="com.springcore.lifecycle.springInterface.annotaion">
+        <property name="subject" value="Math"/>
+    </bean>
 
 </beans>
