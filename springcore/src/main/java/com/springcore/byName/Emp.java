@@ -18,6 +18,7 @@ public class Emp {
 	public Emp(Address address) {
 		super();
 		this.address = address;
+		System.out.print("This value is injected");
 	}
 
 	@Override

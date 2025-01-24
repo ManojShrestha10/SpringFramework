@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<context:annotation-config />
+
+<bean class="com.springcore.autowire.annotation.Subject" name="subject">
+<property name="mathMarks" value="70" />
+<property name="scienceMarks" value="80" />
+</bean>
+
+
+<bean class="com.springcore.autowire.annotation.Subject" name="subject1">
+<property name="mathMarks" value="20" />
+<property name="scienceMarks" value="10" />
+</bean>
+
+<bean class="com.springcore.autowire.annotation.Student" name="stu" />
+
+</beans>
+

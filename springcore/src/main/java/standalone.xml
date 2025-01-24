@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- Standalone list -->
+<util:list list-class="java.util.ArrayList" id="bff">
+<value>Manoj shrestha</value>
+<value>Raman shrestha</value>
+<value>Mira shrestha</value>
+</util:list>
+
+<!--Standalone Map-->
+ <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Spring Framework" value="8000"/>
+        <entry key="Spring Boot" value="6000"/>
+    </util:map>
+
+<!-- Standalone Set-->
+<util:set set-class="java.util.LinkedHashSet" id="number">
+        <value>9312552334</value>
+        <value>8723546787</value>
+    </util:set>
+    
+ <!-- Standalone Properties-->
+ <util:properties id="props">
+ <prop key="driver">Shresthamanoj522@gmail.com</prop>
+ <prop key="username">ManojShrestha</prop>
+ <prop key="password">manoj123</prop>
+ </util:properties>
+<bean class="com.springcore.standalone.collction.Example" name="frn">
+<property name="friends" ref="bff"/>
+<property name="feeStructure" ref="fees"/>
+<property name="phoneNumber" ref="number"/>
+<property name="props" ref="props"/>
+</bean>
+
+</beans>

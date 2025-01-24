@@ -4,12 +4,10 @@ xmlns:c="http://www.springframework.org/schema/c"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean class="com.springcore.byName.Address" name="address">
-<property name="street"  value="Nakano" />
-<property name="city" value="10" />
+<bean class="com.springcore.pratice.autowire.Subject" name="subject">
+<property name="mathMarks" value="70"></property>
+<property name="scienceMarks" value="80"></property>
 </bean>
 
-
-<bean class="com.springcore.byName.Emp" name="auto" autowire="constructor" />
-
+<bean class="com.springcore.pratice.autowire.Student" name="stu" autowire="byName" />
 </beans>
